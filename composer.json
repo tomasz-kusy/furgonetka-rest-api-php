@@ -17,9 +17,8 @@
   "require": {
     "php": "^8.0",
     "ext-json": "*",
-    "guzzlehttp/guzzle": "^6.5",
+    "guzzlehttp/guzzle": "^6.5 || ^7.4",
     "guzzlehttp/psr7": "^1.9",
-    "php-http/guzzle6-adapter": "^2.0",
     "fakerphp/faker": "^1.21"
   },
   "require-dev": {
