@@ -11,13 +11,13 @@ class AddressDetails extends Entity
     public string $street = '';
     public string $postcode = '';
     public string $city = '';
-    public string $name = '';
-    public string $company = '';
-    public string $countryCode = 'PL';
-    public string $county = '';
-    public string $email = '';
-    public string $phone = '';
-    public string $point = '';
+    public ?string $name = '';
+    public ?string $company = '';
+    public ?string $countryCode = 'PL';
+    public ?string $county = null;
+    public ?string $email = '';
+    public ?string $phone = '';
+    public ?string $point = '';
 
     public function toArray(): array
     {

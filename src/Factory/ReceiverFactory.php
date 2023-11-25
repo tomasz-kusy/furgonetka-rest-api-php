@@ -18,8 +18,8 @@ class ReceiverFactory extends Factory
         $receiver->county = '';
         $receiver->email = 'contact@dpd.com';
         $receiver->name = 'DPD Test';
-        $receiver->phone = '225775555';
-        $receiver->point = '';
+        $receiver->phone = '999775555';
+        $receiver->point = 'WAW626M';
         $receiver->postcode = '40-097';
         $receiver->street = '3 maja 40';
 

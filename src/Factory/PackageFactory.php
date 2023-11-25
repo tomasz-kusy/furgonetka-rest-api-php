@@ -15,7 +15,7 @@ class PackageFactory extends Factory
         $package = new Package();
         $package->pickup = PickupFactory::getEntity();
         $package->receiver = ReceiverFactory::getEntity();
-        $package->serviceId = '8800592';
+        $package->serviceId = 9592971;
         $package->parcels = [ParcelFactory::getEntity()];
         $package->sender = SenderFactory::getEntity();
         $package->payer = null;

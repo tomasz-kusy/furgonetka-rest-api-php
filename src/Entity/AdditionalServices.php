@@ -8,7 +8,7 @@ namespace Kwarcek\FurgonetkaRestApi\Entity;
  */
 class AdditionalServices extends Entity
 {
-    public Cod $cod;
+    public ?Cod $cod = null;
     public bool $rod = false;
     public bool $cud = false;
     public bool $privateShipping = false;

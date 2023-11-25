@@ -11,7 +11,7 @@ class Parcel extends Entity
     public int $width;
     public int $depth;
     public int $height;
-    public float $weight;
+    public ?float $weight;
     public float $value;
     public string $description;
 

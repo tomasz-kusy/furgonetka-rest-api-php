@@ -42,7 +42,7 @@ class PackageRequest extends Request
      * @param int $serviceId
      * @param Parcel[] $parcels
      * @param AddressDetails|null $sender
-     * @param AdditionalServices $additionalServices
+     * @param AdditionalServices|null $additionalServices
      * @param string $type
      * @param string|null $userReferenceNumber
      * @param Payer|null $payer
@@ -58,8 +58,8 @@ class PackageRequest extends Request
         AddressDetails $receiver,
         int $serviceId,
         array $parcels,
-        ?AddressDetails $sender,
-        AdditionalServices $additionalServices,
+        ?AddressDetails $sender = null,
+        ?AdditionalServices $additionalServices = null,
         string $type = self::PACKAGE_TYPE_PACKAGE,
         ?string $userReferenceNumber = null,
         ?Payer $payer = null
@@ -73,7 +73,7 @@ class PackageRequest extends Request
             'payer' => $payer?->toArray(),
             'user_reference_number' => $userReferenceNumber,
             'type' => $type,
-            'additional_services' => $additionalServices->toArray(),
+            'additional_services' => $additionalServices?->toArray(),
         ]);
 
         return $this->response($response);
@@ -317,8 +317,8 @@ class PackageRequest extends Request
     public function calculatePackagePrice(Package $package, Service $service): array
     {
         $response = $this->client->post('/packages/calculate-price', [
-            'package' => $package,
-            'services' => $service,
+            'package' => $package->toArray(),
+            'services' => $service->toArray(),
         ]);
 
         return $this->response($response);

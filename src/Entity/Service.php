@@ -8,8 +8,8 @@ namespace Kwarcek\FurgonetkaRestApi\Entity;
  */
 class Service extends Entity
 {
-    public array $service;
-    public array $serviceId;
+    public array $service = [];
+    public array $serviceId = [];
 
     public function toArray(): array
     {
